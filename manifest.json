@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "mouse tracking",
+  "description": "This extension logs user cursor behavior",
+  "version": "0.1",
+
+  "permissions": [
+    "http://*.google.com/",
+    "https://*.google.com/"
+  ],
+  "content_scripts": [
+      {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["test.js"],
+      "run_at": "document_start"
+  }
+  ]
+}
